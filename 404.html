@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redireccionando...</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var query = window.location.search;
+            
+            // Si la ruta contiene /invite (que es el path que dispara el 404)
+            if (path.includes('/invite')) {
+                // Aquí podrías agregar un mensaje o redirigir a la tienda
+                
+                // Opción A: Redirigir a una página de destino fija o a la tienda.
+                // window.location.replace("https://play.google.com/store/apps/details?id=tu.app.id");
+                
+                // Opción B (Avanzada): Redirigir a una página que intente abrir el Deep Link
+                window.location.replace("givinglove://" + path + query); 
+                
+            } else {
+                // Si es un 404 real, redirige al inicio.
+                window.location.replace("https://jck9007.github.io/givinglove.github.io/");
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>Si la aplicación no se abre, serás redirigido.</p>
+</body>
+</html>
