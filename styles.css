@@ -1,0 +1,240 @@
+/* Estilos Generales y Reseteo */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #1a1a1a;
+}
+
+main {
+  /* Espacio para el menú fijo, ajustar si cambias el padding del header */
+  padding-top: 60px;
+}
+
+/* 1. Menú de Navegación */
+header {
+  background-color: #333333;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between; /* Espacio entre logo y enlaces */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-nav .logo a {
+  color: #00bcd4; /* Color llamativo para el logo */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.main-nav ul li a:hover {
+  background-color: #555555;
+}
+
+/* 2. Sección Principal (Hero) */
+.hero {
+  background-color: #00bcd4; /* Azul/Turquesa moderno */
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hero .app-name {
+  font-weight: 700;
+  /* Puedes poner aquí un color diferente si quieres que destaque */
+  /* color: #ffeb3b; */
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Estilos de los Botones de Descarga */
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 40px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.google-play {
+  background-color: #4CAF50; /* Verde de Google Play */
+  color: white;
+}
+
+.app-store {
+  background-color: #000000; /* Negro para App Store */
+  color: white;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Sección de Características */
+.features-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.grid-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item:hover {
+  background-color: #f9f9f9;
+}
+
+.feature-icon {
+  font-size: 2.5em;
+  color: #00bcd4; /* Color de acento */
+  margin-bottom: 10px;
+}
+
+.feature-item h3 {
+  margin-top: 0;
+}
+
+/* 4. Llamada a la Acción Final (CTA) */
+.cta-final {
+  background-color: #f0f0f0;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cta-final h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+/* Pie de Página */
+footer {
+  background-color: #333333;
+  color: #999999;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #999999;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero {
+    padding: 80px 10px;
+  }
+  .hero h1 {
+    font-size: 2.2em;
+  }
+  .download-buttons {
+    flex-direction: column; /* Apilar botones */
+    align-items: center;
+  }
+  .download-btn {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  /* Características */
+  .grid-features {
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+  }
+
+  /* Navegación */
+  .main-nav {
+    flex-direction: column; /* Apilar logo y menú */
+  }
+  .main-nav ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-nav ul li {
+    margin: 5px 10px;
+  }
+}
