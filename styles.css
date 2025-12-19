@@ -1,4 +1,3 @@
-/* Estilos Generales y Reseteo */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
@@ -12,11 +11,9 @@ h1, h2, h3 {
 }
 
 main {
-  /* Espacio para el menú fijo, ajustar si cambias el padding del header */
   padding-top: 60px;
 }
 
-/* 1. Menú de Navegación */
 header {
   background-color: #333333;
   padding: 10px 20px;
@@ -30,14 +27,14 @@ header {
 
 .main-nav {
   display: flex;
-  justify-content: space-between; /* Espacio entre logo y enlaces */
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .main-nav .logo a {
-  color: #00bcd4; /* Color llamativo para el logo */
+  color: #00bcd4;
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
@@ -62,9 +59,8 @@ header {
   background-color: #555555;
 }
 
-/* 2. Sección Principal (Hero) */
 .hero {
-  background-color: #00bcd4; /* Azul/Turquesa moderno */
+  background-color: #00bcd4;
   color: #ffffff;
   padding: 100px 20px;
   text-align: center;
@@ -83,8 +79,6 @@ header {
 
 .hero .app-name {
   font-weight: 700;
-  /* Puedes poner aquí un color diferente si quieres que destaque */
-  /* color: #ffeb3b; */
 }
 
 .hero p {
@@ -92,11 +86,10 @@ header {
   margin-bottom: 30px;
 }
 
-/* Estilos de los Botones de Descarga */
 .download-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Espacio entre los botones */
+  gap: 20px;
   margin-top: 40px;
 }
 
@@ -117,12 +110,12 @@ header {
 }
 
 .google-play {
-  background-color: #4CAF50; /* Verde de Google Play */
+  background-color: #4CAF50;
   color: white;
 }
 
 .app-store {
-  background-color: #000000; /* Negro para App Store */
+  background-color: #000000;
   color: white;
 }
 
@@ -131,7 +124,6 @@ header {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 3. Sección de Características */
 .features-section {
   padding: 60px 20px;
   text-align: center;
@@ -144,7 +136,7 @@ header {
 
 .grid-features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 960px;
   margin: 0 auto;
@@ -164,7 +156,7 @@ header {
 
 .feature-icon {
   font-size: 2.5em;
-  color: #00bcd4; /* Color de acento */
+  color: #00bcd4;
   margin-bottom: 10px;
 }
 
@@ -172,7 +164,6 @@ header {
   margin-top: 0;
 }
 
-/* 4. Llamada a la Acción Final (CTA) */
 .cta-final {
   background-color: #f0f0f0;
   padding: 50px 20px;
@@ -184,7 +175,6 @@ header {
   margin-bottom: 30px;
 }
 
-/* Pie de Página */
 footer {
   background-color: #333333;
   color: #999999;
@@ -202,9 +192,7 @@ footer a:hover {
   color: #ffffff;
 }
 
-/* Media Queries para Responsividad */
 @media (max-width: 768px) {
-  /* Hero */
   .hero {
     padding: 80px 10px;
   }
@@ -212,7 +200,7 @@ footer a:hover {
     font-size: 2.2em;
   }
   .download-buttons {
-    flex-direction: column; /* Apilar botones */
+    flex-direction: column;
     align-items: center;
   }
   .download-btn {
@@ -220,14 +208,12 @@ footer a:hover {
     margin-bottom: 10px;
   }
 
-  /* Características */
   .grid-features {
-    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    grid-template-columns: 1fr;
   }
 
-  /* Navegación */
   .main-nav {
-    flex-direction: column; /* Apilar logo y menú */
+    flex-direction: column;
   }
   .main-nav ul {
     margin-top: 10px;
